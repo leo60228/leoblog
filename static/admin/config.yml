@@ -9,7 +9,11 @@ collections:
     - name: "blog"
       label: "Blog"
       folder: "content"
+      format: toml-frontmatter
       create: true
+      filter:
+          field: "visible"
+          value: true
       fields:
           - label: "Title"
             name: "title"
@@ -23,3 +27,7 @@ collections:
           - label: "Category"
             name: "category"
             widget: "string"
+          - label: "Visible"
+            name: "visible"
+            widget: "hidden"
+            default: true

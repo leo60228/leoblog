@@ -2,6 +2,7 @@
 title = "Welcome to Ergo, a svbtle inspired theme"
 date = 2018-08-31
 category = "test"
+visible = true
 +++
 
 This is a small example post of stuff you can do with the `ergo` theme.

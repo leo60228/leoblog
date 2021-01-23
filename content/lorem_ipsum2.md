@@ -2,6 +2,7 @@
 title="Test Post 8"
 date=2018-08-29
 category="test"
+visible=true
 +++
 
 # A Really Clever Title
