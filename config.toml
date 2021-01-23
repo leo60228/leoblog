@@ -21,6 +21,7 @@ highlight_code = true
 profile = 'vriska2.png'
 github = 'leo60228'
 twitter = 'leo60228'
+fedi = '@leo@60228.dev'
 color_themes = ["dark", "default"]
 
 [extra.comments]
