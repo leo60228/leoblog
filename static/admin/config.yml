@@ -12,7 +12,7 @@ collections:
       folder: "content"
       format: toml-frontmatter
       create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      slug: '{{slug}}'
       preview_path: '{{slug}}'
       filter:
           field: "visible"
