@@ -4,7 +4,7 @@ date = "2021-01-21"
 category = "announcements"
 visible = true
 +++
-(NOTE: this post was originally at <https://old.reddit.com/r/homestuck/comments/l2ekhj/hsmusicifier_automatically_add_track_art_to_id3/> before this blog was created)
+(NOTE: this post was originally on [Reddit](https://old.reddit.com/r/homestuck/comments/l2ekhj/hsmusicifier_automatically_add_track_art_to_id3/) before this blog was created)
 
 hsmusicifier is a tool to add track art from the wonderful [hsmusic.wiki](https://hsmusic.wiki) to ID3 tags. ID3 is a way to add metadata to songs generally used (by both Bandcamp and the vast majority of music players) for mp3 files. This doesn't sound that helpful at first, but it doesn't *just* work for albums that originally had track art. [hsmusic.wiki](https://hsmusic.wiki) also contains multiple fan anthologies of track art and has the SoundCloud exclusive track art for the Friendsim OST!
 
@@ -34,5 +34,4 @@ In addition, while these albums were always released with their original track a
 
 I suppose this could be useful for the LOFAM albums if your download somehow got corrupted.
 
-Anyway, you can download the tool here: https://github.com/leo60228/hsmusicifier/releases/latest\
-The release includes the required data files as well as a Windows version. I've tested Linux built from source (that's how I did development, in fact). macOS should work too, but I haven't tested it.
+Anyway, you can download the tool on [GitHub](https://github.com/leo60228/hsmusicifier/releases/latest). The release includes the required data files as well as a Windows version. I've tested Linux built from source (that's how I did development, in fact). macOS should work too, but I haven't tested it.
