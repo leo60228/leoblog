@@ -22,4 +22,6 @@ hsmusicifier now uses the well-known FFmpeg library for reading and writing audi
 
 # Download
 
-You can download assets and a prebuilt Windows version from [GitHub](https://github.com/leo60228/hsmusicifier/releases/tag/0.2.0).
+~~You can download assets and a prebuilt Windows version from [GitHub](https://github.com/leo60228/hsmusicifier/releases/tag/0.2.0).~~
+
+UPDATE (2020-01-24): 0.2.1 has been released, adding a prebuilt Linux version and a few bugfixes. You can (still) get it from [GitHub](https://github.com/leo60228/hsmusicifier/releases/tag/0.2.1).
