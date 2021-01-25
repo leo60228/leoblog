@@ -24,4 +24,4 @@ With all of these features, you might only want to make some of these changes to
 
 ~~As always, you can download data files and prebuilt binaries for Linux and Windows from [GitHub](https://github.com/leo60228/hsmusicifier/releases/tag/0.3.0).~~
 
-0.3.1 is now available with some minor improvements. You can get it from [GitHub](https://github.com/leo60228/hsmusicifier/releases/0.3.1).
+0.3.1 is now available with some minor improvements. You can get it from [GitHub](https://github.com/leo60228/hsmusicifier/releases/tag/0.3.1).
