@@ -23,7 +23,7 @@ Next, I had to actually send out Webmentions. With [webmention.app](https://webm
 
 ## Syndication and Webmention bridging
 
-Syndication was made very easy by [Bridgy](https://brid.gy). With Bridgy, all I had to do was sign in Mastodon, and then I can automatically syndicate a post from my blog to Mastodon just by including a Webmention to a special link.
+Syndication was made very easy by [Bridgy](https://www.brid.gy). With Bridgy, all I had to do was sign in Mastodon, and then I can automatically syndicate a post from my blog to Mastodon just by including a Webmention to a special link.
 
 Webmention bridging was just as easy. All I had to do was sign in with the services that I'd like to integrate with. There are a few caveats here, however, which are listed in the Bridgy documentation. The most important one is that due to Twitter API limitations some mentions may be lost.
 
