@@ -11,5 +11,11 @@
 {% endblock %}
 {% block post %}
 {{ super() }}
+{% if page.extra.mastodon %}
+<hr>
+<footer class="syndication-links">
+Respond to this post on <a class="u-syndication" href="{{ page.extra.mastodon }}">Mastodon</a>.
+</footer>
+{% endif %}
 <div id="webmentions"></div>
 {% endblock %}
