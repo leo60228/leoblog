@@ -3,7 +3,7 @@ use serde::Deserialize;
 use std::fs::{self, File};
 use std::io::{prelude::*, stdin, BufReader, ErrorKind};
 use std::path::PathBuf;
-use toml_edit::{value, Document};
+use toml_edit::{table, value, Document};
 
 #[derive(Deserialize, Debug)]
 pub struct Original {
@@ -47,8 +47,14 @@ fn add_frontmatter(target: &str, url: &str, path: PathBuf) -> Result<()> {
 
     let mut frontmatter: Document = frontmatter_str.parse()?;
 
-    let entry = frontmatter.as_table_mut().entry(key);
-    *entry = value(url.to_string());
+    let extra = frontmatter
+        .as_table_mut()
+        .entry("extra")
+        .or_insert(table())
+        .as_table_mut()
+        .context("Extra isn't a table!")?;
+
+    *extra.entry(key) = value(url.to_string());
 
     let new_frontmatter = frontmatter.to_string_in_original_order();
     let mut new_file_str = format!("+++\n{}+++\n", new_frontmatter);

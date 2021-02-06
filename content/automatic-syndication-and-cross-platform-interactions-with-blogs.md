@@ -3,6 +3,8 @@ title = "Automatic syndication and cross-platform interactions with blogs"
 date = "2021-02-05"
 category = "notes"
 visible = true
+
+[extra]
 mastodon = "https://60228.dev/@leo/105681362437128155"
 +++
 I've set up the following functionality:

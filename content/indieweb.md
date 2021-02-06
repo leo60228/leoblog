@@ -3,6 +3,8 @@ title = "IndieWeb"
 date = "2021-02-05"
 category = "announcements"
 visible = true
+
+[extra]
 mastodon = "https://60228.dev/@leo/105680736962508370"
 +++
 This site now supports outgoing WebMentions and implements microformats2.
