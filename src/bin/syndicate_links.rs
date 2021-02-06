@@ -99,18 +99,28 @@ fn main() -> Result<()> {
             }
             "error" => {
                 let deserializer = serde_json::Deserializer::from_reader(&mut file);
-                let resp: WebmentionResponse = deserializer
-                    .into_iter()
-                    .next()
-                    .context("Missing response!")??;
-                let url = resp.original.url;
-                let slug = source.split('/').nth(3).context("Couldn't extract slug!")?;
-                let mut path = PathBuf::from("content/");
-                path.push(&slug);
-                path.set_extension("md");
-                ensure!(path.is_file(), "Couldn't find file for {}!", url);
-                println!("{} from {:?} made {}", target, path, url);
-                add_frontmatter(&target, &url, path)?;
+
+                if target.starts_with("https://brid.gy/publish/") {
+                    let resp: WebmentionResponse = deserializer
+                        .into_iter()
+                        .next()
+                        .context("Missing response!")??;
+
+                    let url = resp.original.url;
+                    let slug = source.split('/').nth(3).context("Couldn't extract slug!")?;
+                    let mut path = PathBuf::from("content/");
+                    path.push(&slug);
+                    path.set_extension("md");
+                    ensure!(path.is_file(), "Couldn't find file for {}!", url);
+                    println!("{} from {:?} made {}", target, path, url);
+                    add_frontmatter(&target, &url, path)?;
+                } else {
+                    println!("not brid.gy, skipping");
+                    let _resp: serde_json::Value = deserializer
+                        .into_iter()
+                        .next()
+                        .context("Missing error!")??;
+                }
             }
             x => println!("ignoring {}", x),
         }
