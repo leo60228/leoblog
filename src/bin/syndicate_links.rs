@@ -1,7 +1,7 @@
 use anyhow::{ensure, Context, Result};
 use serde::Deserialize;
 use std::fs::{self, File};
-use std::io::{prelude::*, stdin, BufReader, ErrorKind};
+use std::io::{prelude::*, stdin, BufReader};
 use std::path::PathBuf;
 use toml_edit::{table, value, Document};
 
@@ -72,6 +72,8 @@ fn main() -> Result<()> {
     let mut buf = vec![];
 
     let mut source = "".to_string();
+    let mut endpoint = "".to_string();
+    let mut pingback = false;
     let mut target = "".to_string();
 
     loop {
@@ -91,6 +93,12 @@ fn main() -> Result<()> {
                 source.clear();
                 file.read_line(&mut source)?;
                 source = source.trim().to_string();
+            }
+            "endpoint" => {
+                endpoint.clear();
+                file.read_line(&mut endpoint)?;
+                endpoint = endpoint.trim().to_string();
+                pingback = endpoint.ends_with(" (pingback)");
             }
             "target" => {
                 target.clear();
@@ -114,6 +122,8 @@ fn main() -> Result<()> {
                     ensure!(path.is_file(), "Couldn't find file for {}!", url);
                     println!("{} from {:?} made {}", target, path, url);
                     add_frontmatter(&target, &url, path)?;
+                } else if pingback {
+                    println!("pingback, skipping");
                 } else {
                     println!("not brid.gy, skipping");
                     let _resp: serde_json::Value = deserializer
@@ -121,14 +131,12 @@ fn main() -> Result<()> {
                         .next()
                         .context("Missing error!")??;
                 }
+                file.read_line(&mut String::new())?;
             }
-            x => println!("ignoring {}", x),
-        }
-
-        match file.read_line(&mut String::new()) {
-            Ok(_) => {}
-            Err(x) if x.kind() == ErrorKind::UnexpectedEof => break,
-            Err(x) => return Err(x.into()),
+            x => {
+                println!("ignoring {}", x);
+                file.read_line(&mut String::new())?;
+            }
         }
     }
 
