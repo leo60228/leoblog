@@ -30,10 +30,10 @@ Now that tpm2-pkcs11 is installed, all that needs to be done is to create an emu
 tpm2_ptool init
 
 # label, sopin, and userpin can be anything but need to match in future commands
-tpm_ptool addtoken --pid=1 --label=ftpmtoken1 --sopin=mysopin --userpin=myuserpin
+tpm2_ptool addtoken --pid=1 --label=ftpmtoken1 --sopin=mysopin --userpin=myuserpin
 
 # several algorithms are available, see `tpm_ptool --help`
-tpm_ptool addkey --algorithm=ecc256 --label=ftpmtoken1 --sopin=mysopin --userpin=myuserpin
+tpm2_ptool addkey --algorithm=ecc256 --label=ftpmtoken1 --sopin=mysopin --userpin=myuserpin
 ```
 
 ## ssh certificates
