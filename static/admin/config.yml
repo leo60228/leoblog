@@ -30,10 +30,14 @@ collections:
           - label: "Category"
             name: "category"
             widget: "string"
-          - label: "Mastodon URL"
-            name: "mastodon"
-            required: false
-            widget: "string"
+          - label: "Extra"
+            name: "extra"
+            widget: "object"
+            fields:
+                - label: "Mastodon URL"
+                  name: "mastodon"
+                  required: false
+                  widget: "string"
           - label: "Visible"
             name: "visible"
             widget: "hidden"
