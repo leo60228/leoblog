@@ -19,11 +19,13 @@ I thought this issue may have been Threadripper-specific, and I found a patchset
 Once the TPM is visible, NixOS makes it pretty easy to set up tpm2-pkcs11. All that needs to be done is to add a small snippet to the NixOS configuration that enables tpm2-software as a whole, tpm2-pkcs11 for PKCS#11 emulation, and tabrmd which manages TPM access from userspace:
 
 ```nix
-    security.tpm2 = {
-      enable = true;
-      pkcs11.enable = true;
-      abrmd.enable = true;
-    };
+{
+  security.tpm2 = {
+    enable = true;
+    pkcs11.enable = true;
+    abrmd.enable = true;
+  };
+}
 ```
 
 Now that tpm2-pkcs11 is installed, all that needs to be done is to create an emulated PKCS#11 token and generate a key.
@@ -51,9 +53,11 @@ ssh-keygen -D /run/current-system/sw/lib/libtpm2_pkcs11.so | tee ssh-ca.pub
 Next, `ssh-ca.pub` needs to be trusted on all the systems you'd like to log in to. For systems where you can't do this, such as hosted Git providers, you can of course just use `authorized_keys` like normal. NixOS doesn't have an option for this, but it can easily be added to `sshd_config`:
 
 ```nix
+{
   services.openssh.extraConfig = ''
   TrustedUserCAKeys ${../files/ssh-ca.pub}
   ''; 
+}
 ```
 
 Now, you need to create the signatures. Copy the public keys you'd like to sign over to the system you set up the fTPM on. There are quite a few options available here, with the full list being available in ssh-keygen's manual page. For a simple example with a signature named `desktop` with a serial number of 1 authorized to log in as `leo60228`:
