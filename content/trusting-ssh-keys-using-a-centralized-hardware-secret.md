@@ -3,6 +3,9 @@ title = "Trusting ssh keys using a centralized hardware secret"
 date = "2021-02-06"
 category = "notes"
 visible = true
+
+[extra]
+mastodon = "https://60228.dev/@leo/105687065669022158"
 +++
 In the past, I've used a single passwordless ssh key shared between all of my devices. This is obviously very insecure, but means that I don't have to deal with an easily-losable hardware token or synchronizing many public keys between devices. However, some little-known functionality makes it possible for me to approve keys with a hardware secret on my workstation and have them automatically be usable to log in to all of my machines.
 
