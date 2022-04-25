@@ -30,6 +30,11 @@ display = "leo60228"
 uri = "https://github.com/leo60228"
 
 [[extra.socials]]
+icon = "gitlab"
+display = "vriska"
+uri = "https://gitlab.com/vriska"
+
+[[extra.socials]]
 icon = "twitter"
 display = "@leo60228"
 uri = "https://twitter.com/leo60228"
@@ -38,6 +43,11 @@ uri = "https://twitter.com/leo60228"
 icon = "mastodon"
 display = "@leo@60228.dev"
 uri = "https://60228.dev/@leo"
+
+[[extra.socials]]
+icon = "tumblr"
+display = "leo60228"
+uri = "https://leo60228.tumblr.com"
 
 [extra.comments]
 repo = "leo60228/leoblog"
