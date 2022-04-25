@@ -1,7 +1,10 @@
 {% extends "Ergo/templates/index.html" %}
 {% block head %}
 {{ super() }}
+<script src="/nodarkreader.min.js" async></script>
 <meta property="og:title" content="leo homestuck">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/static/img/vriska2.png">
+<meta name="color-scheme" content="{{ config.extra.color_themes[0] }}"/>
+<meta name="darkreader" content="NO-DARKREADER-PLUGIN"/>
 {% endblock %}

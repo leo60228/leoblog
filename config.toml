@@ -22,13 +22,28 @@ highlight_code = true
 [extra]
 # Put all your custom variables here
 profile = 'vriska2.png'
-github = 'leo60228'
-twitter = 'leo60228'
-fedi = '@leo@60228.dev'
-color_themes = ["dark", "default"]
+color_themes = ["dark", "light"]
+
+[[extra.socials]]
+icon = "github"
+display = "leo60228"
+uri = "https://github.com/leo60228"
+
+[[extra.socials]]
+icon = "twitter"
+display = "@leo60228"
+uri = "https://twitter.com/leo60228"
+
+[[extra.socials]]
+icon = "mastodon"
+display = "@leo@60228.dev"
+uri = "https://60228.dev/@leo"
 
 [extra.comments]
 repo = "leo60228/leoblog"
 theme = "github-dark"
 label = "comment"
 term = "pathname"
+
+[extra.font_awesome]
+kit = "e307e34624"
