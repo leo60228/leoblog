@@ -4,7 +4,7 @@ date = "2021-01-24"
 category = "announcements"
 visible = true
 +++
-(If you missed it, check out the [0.2.0 announcement](https://leo60228.space/hsmusicifier-0-2-0-add-track-art-and-artist-info-to-your-homestuck-music-collection-in-any-format/).)
+(If you missed it, check out the [0.2.0 announcement](https://vriska.dev/hsmusicifier-0-2-0-add-track-art-and-artist-info-to-your-homestuck-music-collection-in-any-format/).)
 
 hsmusicifier is a tool to add metadata from [hsmusic.wiki](https://hsmusic.wiki) to your Homestuck music collection. 0.3.0 adds some extra flexibility for art, and enables splitting up bundled albums.
 

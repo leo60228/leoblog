@@ -4,7 +4,7 @@ date = "2021-01-23"
 category = "announcements"
 visible = true
 +++
-hsmusicifier is a tool to add metadata from [hsmusic.wiki](https://hsmusic.wiki) to a Homestuck music collection. See [the announcement post](https://leo60228.space/hsmusicifier-automatically-add-track-art-to-id3-tags-including-fan-anthologies-and-post-2019-bandcamp/) for more details on the core functionality.
+hsmusicifier is a tool to add metadata from [hsmusic.wiki](https://hsmusic.wiki) to a Homestuck music collection. See [the announcement post](https://vriska.dev/hsmusicifier-automatically-add-track-art-to-id3-tags-including-fan-anthologies-and-post-2019-bandcamp/) for more details on the core functionality.
 
 hsmusicifier 0.2.0 adds two major new features.
 
